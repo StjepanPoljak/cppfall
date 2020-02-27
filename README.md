@@ -4,4 +4,4 @@ A simple TUI in C++ that emulates particle behaviour (very naively). Similar to 
 
 To build, just run `make`. Then, just run with `./cppfall`.
 
-Use arrow keys to move, and the return key to add blocks.
+Use arrow keys to move, and the return key to add blocks. Use escape to exit.
