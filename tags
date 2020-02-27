@@ -1,0 +1,129 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/126781c6/
+$(obj_dir)	Makefile	/^$(obj_dir):$/;"	t
+$(obj_dir)/%.o	Makefile	/^$(obj_dir)\/%.o: $(src_dir)\/%.cpp$/;"	t
+$(proj)	Makefile	/^$(proj): $(obj_dir) $(obj)$/;"	t
+.PHONY	Makefile	/^.PHONY = all run clean force$/;"	m
+DRAWABLE_H	include/drawable.h	/^#define DRAWABLE_H$/;"	d
+Drawable	include/drawable.h	/^class Drawable {$/;"	c
+MatrixFunction	include/scene.h	/^typedef function<void(SceneElement&, Point&)> MatrixFunction;$/;"	t
+OBJECT_H	include/object.h	/^#define OBJECT_H$/;"	d
+Object	include/object.h	/^	Object(Point pos): Object(pos.x, pos.y) { };$/;"	f	class:Object
+Object	include/object.h	/^	Object(Point pos, char c): objectPosition(pos), symbol(c) { };$/;"	f	class:Object
+Object	include/object.h	/^	Object(int x, int y): Object(x, y, '#') { };$/;"	f	class:Object
+Object	include/object.h	/^	Object(int x, int y, char c): objectPosition(x, y), symbol(c) { };$/;"	f	class:Object
+Object	include/object.h	/^class Object: Drawable {$/;"	c
+Particle	include/object.h	/^	Particle(Point pos): Particle(pos.x, pos.y) { };$/;"	f	class:Particle
+Particle	include/object.h	/^	Particle(int x, int y): Particle(x, y, Point(0,0)) { };$/;"	f	class:Particle
+Particle	include/object.h	/^	Particle(int x, int y, Point vector): Object(x, y, '.'), objectVector(vector) { };$/;"	f	class:Particle
+Particle	include/object.h	/^class Particle: public Object {$/;"	c
+Point	include/object.h	/^	Point(): x(0), y(0) { };$/;"	f	class:Point
+Point	include/object.h	/^	Point(int x, int y): x(x), y(y) { };$/;"	f	class:Point
+Point	include/object.h	/^class Point {$/;"	c
+PosUnion	include/scene.h	/^	PosUnion(): creationPoint(Point(0,0)) { };$/;"	f	union:PosUnion
+PosUnion	include/scene.h	/^union PosUnion {$/;"	u
+Rect	include/drawable.h	/^	Rect(): width(0), height(0) { };$/;"	f	class:Rect
+Rect	include/drawable.h	/^	Rect(unsigned int width, unsigned int height): width(width), height(height) { };$/;"	f	class:Rect
+Rect	include/drawable.h	/^class Rect {$/;"	c
+SCENE_H	include/scene.h	/^#define SCENE_H$/;"	d
+SET_EMPTY	include/scene.h	/^	SET_EMPTY$/;"	e	enum:SceneElementType
+SET_OBJECT	include/scene.h	/^	SET_OBJECT,$/;"	e	enum:SceneElementType
+SET_PARTICLE	include/scene.h	/^	SET_PARTICLE,$/;"	e	enum:SceneElementType
+SM_EXACT	include/scene.h	/^	SM_EXACT,$/;"	e	enum:SceneMode
+SM_RANDOM	include/scene.h	/^	SM_RANDOM$/;"	e	enum:SceneMode
+Scene	include/scene.h	/^class Scene: Drawable {$/;"	c
+Scene	source/scene.cpp	/^Scene::Scene(Rect size, SceneSettings* sceneSettings) {$/;"	f	class:Scene
+SceneElement	include/scene.h	/^typedef tuple<unsigned int, SceneElementType> SceneElement;$/;"	t	typeref:typename:tuple<unsigned int,SceneElementType>
+SceneElementType	include/scene.h	/^enum SceneElementType {$/;"	g
+SceneMatrix	include/scene.h	/^typedef vector<vector<SceneElement>> SceneMatrix;$/;"	t	typeref:typename:vector<vector<SceneElement>>
+SceneMode	include/scene.h	/^enum SceneMode {$/;"	g
+SceneSettings	include/scene.h	/^	SceneSettings(): sceneMode(SM_EXACT), posUnion(), usecCreate(10000), usecUpdate(10000) { };$/;"	f	struct:SceneSettings
+SceneSettings	include/scene.h	/^typedef struct SceneSettings {$/;"	s
+SceneSettings	include/scene.h	/^} SceneSettings;$/;"	t	typeref:struct:SceneSettings
+WINDOW_H	include/window.h	/^#define WINDOW_H$/;"	d
+Window	include/window.h	/^class Window {$/;"	c
+Window	source/window.cpp	/^Window::Window() {$/;"	f	class:Window
+__anond3de0c240102	source/scene.cpp	/^	MatrixFunction f = [this](SceneElement& se, Point& pos) {$/;"	f	function:Scene::Scene	file:
+__anond3de0c240202	source/scene.cpp	/^	MatrixFunction f = [this](SceneElement& se, Point& position) {$/;"	f	function:Scene::draw	file:
+addObject	source/scene.cpp	/^bool Scene::addObject(Object object) {$/;"	f	class:Scene	typeref:typename:bool
+addParticle	source/scene.cpp	/^bool Scene::addParticle(Point& p) {$/;"	f	class:Scene	typeref:typename:bool
+build/main.o	Makefile	/^build\/main.o: source\/main.cpp$/;"	t
+clean	Makefile	/^clean:$/;"	t
+cleanup	source/window.cpp	/^void Window::cleanup() {$/;"	f	class:Window	typeref:typename:void
+clearScreen	source/window.cpp	/^void Window::clearScreen() {$/;"	f	class:Window	typeref:typename:void
+cppflags	Makefile	/^cppflags := -I$(inc_dir)$/;"	m
+creationPoint	include/scene.h	/^	Point creationPoint;$/;"	m	union:PosUnion	typeref:typename:Point
+cursSet	source/window.cpp	/^void Window::cursSet(bool state) {$/;"	f	class:Window	typeref:typename:void
+cursorPos	include/window.h	/^	Point cursorPos = Point(0,0);$/;"	m	class:Window	typeref:typename:Point
+draw	source/object.cpp	/^void Object::draw() {$/;"	f	class:Object	typeref:typename:void
+draw	source/scene.cpp	/^void Scene::draw() {$/;"	f	class:Scene	typeref:typename:void
+drawChar	source/window.cpp	/^void Window::drawChar(Point &p, char c) {$/;"	f	class:Window	typeref:typename:void
+drawEmpty	source/scene.cpp	/^void Scene::drawEmpty(Point& position) {$/;"	f	class:Scene	typeref:typename:void
+drawSingle	source/scene.cpp	/^void Scene::drawSingle(Point &p) {$/;"	f	class:Scene	typeref:typename:void
+forEachElement	source/scene.cpp	/^void Scene::forEachElement(MatrixFunction& f) {$/;"	f	class:Scene	typeref:typename:void
+getSize	include/window.h	/^	Rect getSize() { return windowSize; };$/;"	f	class:Window	typeref:typename:Rect
+height	include/drawable.h	/^	unsigned int height;$/;"	m	class:Rect	typeref:typename:unsigned int
+inc_dir	Makefile	/^inc_dir := include$/;"	m
+inputThread	include/window.h	/^	std::thread* inputThread;$/;"	m	class:Window	typeref:typename:std::thread *
+intHandler	source/main.cpp	/^void intHandler(int sig) {$/;"	f	typeref:typename:void
+isValidPosition	source/scene.cpp	/^bool Scene::isValidPosition(Point& p) {$/;"	f	class:Scene	typeref:typename:bool
+libflags	Makefile	/^libflags := -pthread$/;"	m
+main	source/main.cpp	/^int main(int argc, char* argv[]) {$/;"	f	typeref:typename:int
+move	source/window.cpp	/^void Window::move(Point &p) {$/;"	f	class:Window	typeref:typename:void
+obj	Makefile	/^obj := $(addsuffix .o,$(obj_no_ext))$/;"	m
+obj_dir	Makefile	/^obj_dir := build$/;"	m
+obj_no_ext	Makefile	/^obj_no_ext := $(addprefix $(obj_dir)\/, $(notdir $(basename $(src))))$/;"	m
+objectPosition	include/object.h	/^	Point objectPosition;$/;"	m	class:Object	typeref:typename:Point
+objectVector	include/object.h	/^	Point objectVector;$/;"	m	class:Particle	typeref:typename:Point
+objects	include/scene.h	/^	vector<Object> objects;$/;"	m	class:Scene	typeref:typename:vector<Object>
+onKeyPressed	source/window.cpp	/^bool Window::onKeyPressed(char key[3]) {$/;"	f	class:Window	typeref:typename:bool
+operator ==	source/object.cpp	/^bool Point::operator ==(const Point& p) {$/;"	f	class:Point	typeref:typename:bool
+orig_term_attr	include/window.h	/^	struct termios orig_term_attr;$/;"	m	class:Window	typeref:struct:termios
+particles	include/scene.h	/^	vector<Particle> particles;$/;"	m	class:Scene	typeref:typename:vector<Particle>
+posUnion	include/scene.h	/^	PosUnion posUnion;$/;"	m	struct:SceneSettings	typeref:typename:PosUnion
+proj	Makefile	/^proj := cppfall$/;"	m
+refreshSize	source/window.cpp	/^void Window::refreshSize() {$/;"	f	class:Window	typeref:typename:void
+region	include/scene.h	/^	Rect region;$/;"	m	union:PosUnion	typeref:typename:Rect
+removeObjectAt	source/scene.cpp	/^bool Scene::removeObjectAt(Point& p) {$/;"	f	class:Scene	typeref:typename:bool
+restore	source/window.cpp	/^void Window::restore(Point &p) {$/;"	f	class:Window	typeref:typename:void
+reverse	source/object.cpp	/^Point Point::reverse() {$/;"	f	class:Point	typeref:typename:Point
+reverse	source/window.cpp	/^void Window::reverse(Point &p) {$/;"	f	class:Window	typeref:typename:void
+run	Makefile	/^run: $(proj)$/;"	t
+scene	include/window.h	/^	Scene* scene;$/;"	m	class:Window	typeref:typename:Scene *
+sceneMatrix	include/scene.h	/^	SceneMatrix sceneMatrix;$/;"	m	class:Scene	typeref:typename:SceneMatrix
+sceneMode	include/scene.h	/^	SceneMode sceneMode;$/;"	m	struct:SceneSettings	typeref:typename:SceneMode
+sceneMutex	include/scene.h	/^	mutex sceneMutex;$/;"	m	class:Scene	typeref:typename:mutex
+sceneSettings	include/scene.h	/^	SceneSettings* sceneSettings = NULL;$/;"	m	class:Scene	typeref:typename:SceneSettings *
+setExact	source/scene.cpp	/^void Scene::setExact(SceneSettings& sceneSettings, Point creationPoint) {$/;"	f	class:Scene	typeref:typename:void
+setRandom	source/scene.cpp	/^void Scene::setRandom(SceneSettings& sceneSettings, Rect region) {$/;"	f	class:Scene	typeref:typename:void
+setTime	source/scene.cpp	/^void Scene::setTime(SceneSettings& sceneSettings, unsigned int usecCreate, unsigned int usecUpda/;"	f	class:Scene	typeref:typename:void
+size	include/scene.h	/^	Rect size;$/;"	m	class:Scene	typeref:typename:Rect
+src	Makefile	/^src := $(wildcard $(src_dir)\/*.cpp)$/;"	m
+src_dir	Makefile	/^src_dir := source$/;"	m
+start	source/scene.cpp	/^bool Scene::start() {$/;"	f	class:Scene	typeref:typename:bool
+startScene	source/window.cpp	/^bool Window::startScene(SceneSettings* sceneSettings) {$/;"	f	class:Window	typeref:typename:bool
+symbol	include/object.h	/^	char symbol;$/;"	m	class:Object	typeref:typename:char
+update	source/scene.cpp	/^void Scene::update(Rect size) {$/;"	f	class:Scene	typeref:typename:void
+usecCreate	include/scene.h	/^	unsigned int usecCreate() { return this->sceneSettings->usecCreate; };$/;"	f	class:Scene	typeref:typename:unsigned int
+usecCreate	include/scene.h	/^	unsigned int usecCreate;$/;"	m	struct:SceneSettings	typeref:typename:unsigned int
+usecUpdate	include/scene.h	/^	unsigned int usecUpdate() { return this->sceneSettings->usecUpdate; };$/;"	f	class:Scene	typeref:typename:unsigned int
+usecUpdate	include/scene.h	/^	unsigned int usecUpdate;$/;"	m	struct:SceneSettings	typeref:typename:unsigned int
+waitForInput	source/window.cpp	/^void Window::waitForInput(Window *window) {$/;"	f	class:Window	typeref:typename:void
+width	include/drawable.h	/^	unsigned int width;$/;"	m	class:Rect	typeref:typename:unsigned int
+window	source/main.cpp	/^Window* window;$/;"	v	typeref:typename:Window *
+windowSize	include/window.h	/^	Rect windowSize;$/;"	m	class:Window	typeref:typename:Rect
+x	include/object.h	/^	int x;$/;"	m	class:Point	typeref:typename:int
+y	include/object.h	/^	int y;$/;"	m	class:Point	typeref:typename:int
+~Object	include/object.h	/^	~Object() { };$/;"	f	class:Object
+~Particle	include/object.h	/^	~Particle() { };$/;"	f	class:Particle
+~Point	include/object.h	/^	~Point() { };$/;"	f	class:Point
+~PosUnion	include/scene.h	/^	~PosUnion() { };$/;"	f	union:PosUnion
+~Rect	include/drawable.h	/^	~Rect() { };$/;"	f	class:Rect
+~Scene	source/scene.cpp	/^Scene::~Scene() {$/;"	f	class:Scene
+~SceneSettings	include/scene.h	/^	~SceneSettings() { };$/;"	f	struct:SceneSettings
+~Window	source/window.cpp	/^Window::~Window() {$/;"	f	class:Window
