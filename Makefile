@@ -8,17 +8,17 @@ src := $(wildcard $(src_dir)/*.cpp)
 obj_no_ext := $(addprefix $(obj_dir)/, $(notdir $(basename $(src))))
 obj := $(addsuffix .o,$(obj_no_ext))
 
-cppflags := -I$(inc_dir)
-libflags := -pthread
+CXXFLAGS += -I$(inc_dir)
+LDLIBS := -pthread
 
 $(proj): $(obj_dir) $(obj)
-	g++ $(cppflags) $(libflags) $(filter-out $(obj_dir),$^) -o $@
+	$(CXX) $(CXXFLAGS) $(LDLIBS) $(filter-out $(obj_dir),$^) -o $@
 
 build/main.o: source/main.cpp
-	g++ $(cppflags) -c $< -o $@
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 $(obj_dir)/%.o: $(src_dir)/%.cpp
-	g++ $(cppflags) -c $< -o $@
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 .PHONY = all run clean force
 run: $(proj)
