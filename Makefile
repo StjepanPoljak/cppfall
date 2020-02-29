@@ -12,7 +12,7 @@ CXXFLAGS += -I$(inc_dir)
 LDLIBS := -pthread
 
 $(proj): $(obj_dir) $(obj)
-	$(CXX) $(CXXFLAGS) $(LDLIBS) $(filter-out $(obj_dir),$^) -o $@
+	$(CXX) $(CXXFLAGS) $(LDLIBS) $(filter-out $(obj_dir),$^) -o $@ $(LDFLAGS)
 
 build/main.o: source/main.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
