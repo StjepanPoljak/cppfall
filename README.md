@@ -1,5 +1,7 @@
 # CppFall
 
+[![Build Status](https://travis-ci.org/StjepanPoljak/cppfall.svg?branch=master)](https://travis-ci.org/StjepanPoljak/cppfall)
+
 A simple TUI in C++ that emulates particle behaviour (very naively). Similar to cellular automata.
 
 ## Build
